@@ -2,7 +2,7 @@
 
 [메인 페이지로 돌아가기](https://github.com/jaeyong0311?tab=repositories)
 
-<u>자판기 시뮬레이션 프로그램입니다.</u>
+<u>자판기 시뮬레이션 프로그램입니다</u>
 
 **음료 선택
 음료 개수 입력
