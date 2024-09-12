@@ -1,0 +1,47 @@
+### 자판기 ###
+# 1. 음료 종류를 선택. (선택 번호 입력)
+# 2. 몇잔 마실지 선택. (숫자로 입력)
+# 3. 자판기에서 총 금액 출력
+# 4. 돈을 투입한다(숫자로 입력)
+# 5. 거스름 돈을 받는다.(if문 활용)
+
+#가격의 초기값을 0으로 설정
+price = 0
+
+#음료 종류 선택하는 부분
+a = "아이스 아메리카노"
+b = "카페라떼"
+c = "아이스티"
+d = "녹차라떼"
+
+print("\n"+a+str(" (1500원)")+"/"+b+str(" (1800원)")+"/"+c+str(" (2300원)")+"/"+d+str(" (3000원)"))
+
+print( )
+print("음료 종류를 선택해주세요.")
+order = input("메뉴 입력 >>> ")
+#메뉴판 설정
+if order == "아이스 아메리카노":
+    price = 1500
+elif order == "카페라떼":
+    price = 1800
+elif order == "아이스티":
+    price = 2300
+elif order == "녹차라떼":
+    price = 3000
+
+#선택 음료의 총 개수 설정
+cups = int(input("몇 잔을 드릴까요? >>>"))
+
+#총 금액 관련 변수 생성
+total_price = price * cups
+
+#총 급액 출력 & 돈 투입 (3번 4번 동시에 진행 가능)
+received = int(input(f"총 금액은 {total_price}입니다. 돈을 투입해주세요 >>>"))
+
+if received >= total_price:
+    change = received - total_price #거스름돈에 대한 변수 생성
+
+    print(f"{received}원을 받았습니다. 거스름돈은{change}원입니다.")
+else:
+    print("금액이 부족합니다. 주문이 취소되었습니다.")
+print(f"{order}나왔습니다.")
